@@ -7,6 +7,8 @@ import LoadingBar from 'react-redux-loading'
 import Leaderboard from './Leaderboard'
 import Login from './Login'
 import QGrid from './QGrid'
+import Poll from './Poll'
+import NewQuestion from './NewQuestion'
 
 class App extends Component {
   componentDidMount() {
@@ -32,7 +34,9 @@ class App extends Component {
                 <div>
                   <Route path='/' exact component={QGrid} />
                   <Route path='/leaderboard' exact component={Leaderboard} />
+                  <Route path='/add' exact component={NewQuestion} />
                   <Route path='/login' component={Login} />
+                  <Route path='/questions/:question_id' component={Poll} />
                 </div>}
           </div>
         </Fragment>

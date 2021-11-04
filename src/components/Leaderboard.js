@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Card } from 'react-bootstrap'
 import { connect } from 'react-redux'
 
 class Leaderboard extends Component {
@@ -11,11 +10,11 @@ class Leaderboard extends Component {
 
                 {
                     this.props.userIds.map((e) => {
-                        return <div className='tweet'>
-                            <h3 className='tweet'>{this.props.users[e].name}</h3>
-                            <p className='textarea'>{`Questions: ${Object.values(this.props.users[e].questions).length}`}</p>
-                            <p className='textarea'>{`Answers: ${Object.values(this.props.users[e].answers).length}`}</p>
-                            <h3 className='tweet-info'>{`Total: ${Object.values(this.props.users[e].questions).length + Object.values(this.props.users[e].answers).length}`}</h3>
+                        return <div key={`mdiv-${e}`} className='tweet'>
+                            <h3 key={this.props.users[e].name} className='tweet'>{this.props.users[e].name}</h3>
+                            <p key={`q-${e}`} className='textarea'>{`Questions: ${Object.values(this.props.users[e].questions).length}`}</p>
+                            <p key={`a-${e}`} className='textarea'>{`Answers: ${Object.values(this.props.users[e].answers).length}`}</p>
+                            <h3 key={`total-${e}`} className='tweet-info'>{`Total: ${Object.values(this.props.users[e].questions).length + Object.values(this.props.users[e].answers).length}`}</h3>
                         </div>
                     })
 

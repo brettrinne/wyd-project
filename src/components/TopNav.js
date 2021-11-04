@@ -15,8 +15,6 @@ class TopNav extends Component {
 
     render() {
 
-        const { dispatch } = this.props
-
         return (
             <nav className='nav'>
                 <ul>
@@ -41,11 +39,19 @@ class TopNav extends Component {
                                 </button>
                             </li>
                             :
-                            <li key='logout'>
-                                <button className='btn-nav' onClick={this.handleResetUser}>
-                                    {`Logout as ${this.props.authedUser}`}
-                                </button>
-                            </li>
+                            <ul>
+                                <li key='new'>
+                                    <NavLink to='/add' exact activeclassname='active'>
+                                        New Question
+                                    </NavLink>
+                                </li>
+
+                                <li key='logout'>
+                                    <button className='btn-nav' onClick={this.handleResetUser}>
+                                        {`Logout as ${this.props.authedUser}`}
+                                    </button>
+                                </li>
+                            </ul>
 
                     }
 
