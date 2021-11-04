@@ -36,7 +36,7 @@ class App extends Component {
                   <Route path='/leaderboard' exact component={Leaderboard} />
                   <Route path='/add' exact component={NewQuestion} />
                   <Route path='/login' component={Login} />
-                  <Route path='/questions/:question_id' component={Poll} />
+                  <Route path='/question/:question_id' component={Poll} />
                 </div>}
           </div>
         </Fragment>

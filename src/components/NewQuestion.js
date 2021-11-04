@@ -12,6 +12,7 @@ class NewQuestion extends Component {
             optionOne: op1,
             optionTwo: op2
         }))
+        this.props.history.push('/')
     }
 
     render() {

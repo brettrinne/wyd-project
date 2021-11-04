@@ -66,7 +66,7 @@ class Poll extends Component {
                                     <input name='options' type='radio' value='optionTwo' id='2'></input>
                                 </div>
                             </div>
-                            <button className='btn' onClick={(e) => this.handleVote(e, id, this.props.authedUser)}>Vote</button>
+                            <button className='btnpoll' onClick={(e) => this.handleVote(e, id, this.props.authedUser)}>Vote</button>
                         </div>
 
 
