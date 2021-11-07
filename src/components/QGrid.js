@@ -29,6 +29,7 @@ class QGrid extends Component {
 }
 
 function mapStateToProps({ users, questions, authedUser }) {
+    questions = Object.fromEntries(Object.entries(questions).sort(([, a], [, b]) => b.timestamp - a.timestamp))
     return {
         users,
         questions,

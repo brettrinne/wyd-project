@@ -11,6 +11,7 @@ class Leaderboard extends Component {
                 {
                     this.props.userIds.map((e) => {
                         return <div key={`mdiv-${e}`} className='tweet'>
+                            <img src={`${this.props.users[e].avatarURL}`} alt="Author" className='avatar' />
                             <h3 key={this.props.users[e].name} className='tweet'>{this.props.users[e].name}</h3>
                             <p key={`q-${e}`} className='textarea'>{`Questions: ${Object.values(this.props.users[e].questions).length}`}</p>
                             <p key={`a-${e}`} className='textarea'>{`Answers: ${Object.values(this.props.users[e].answers).length}`}</p>

@@ -23,11 +23,6 @@ class TopNav extends Component {
                             Home
                         </NavLink>
                     </li>
-                    <li key='leaderboard'>
-                        <NavLink to='/leaderboard' activeclassname='active'>
-                            Leaderboard
-                        </NavLink>
-                    </li>
                     {
 
                         this.props.authedUser.length === 0 ?
@@ -40,6 +35,11 @@ class TopNav extends Component {
                             </li>
                             :
                             <ul>
+                                <li key='leaderboard'>
+                                    <NavLink to='/leaderboard' activeclassname='active'>
+                                        Leaderboard
+                                    </NavLink>
+                                </li>
                                 <li key='new'>
                                     <NavLink to='/add' exact activeclassname='active'>
                                         New Question

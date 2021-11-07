@@ -32,7 +32,6 @@ class Poll extends Component {
                 {
                     userAnsw.includes(id) ?
                         <div>
-                            {console.log(questions[id].optionOne.votes.length / (questions[id].optionOne.votes.length + questions[id].optionTwo.votes.length) * 100)}
                             <div className='container'>
                                 <div className='textarea'>
                                     {currUser.answers[id] === 'optionOne' ? <Badge bg="secondary">Voted</Badge> : null}
@@ -56,6 +55,8 @@ class Poll extends Component {
                         :
                         <div>
                             <div className='container'>
+                                <p>{`${questions[id].author} asks`}</p>
+                                <img src={`${users[questions[id].author].avatarURL}`} alt="Author" className='avatar' />
                                 <h3 className='center'>Would You Rather...</h3>
                                 <div className='textarea'>
                                     <p>{questions[id].optionOne.text}</p>
